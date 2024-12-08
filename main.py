@@ -35,11 +35,11 @@ class Student:
     def __eq__(self, other):
         return self.average_grade_student() == other.average_grade_student()
 
-    def __ge__(self, other):
-        return self.average_grade_student() == other.average_grade_student()
+    def __gt__(self, other):
+        return self.average_grade_student() > other.average_grade_student()
 
     def __lt__(self, other):
-        return self.average_grade_student() == other.average_grade_student()
+        return self.average_grade_student() < other.average_grade_student()
 
 
 class Mentor:
