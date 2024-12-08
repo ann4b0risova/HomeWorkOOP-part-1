@@ -28,6 +28,15 @@ class Student:
                  f'Завершенные курсы: {finished_courses_string}'
         return result
 
+    def __eq__(self):
+        return (student_best.average_grade() == student_best1.average_grade())
+
+    def __ge__(self):
+        return (student_best.average_grade() >= student_best1.average_grade())
+
+    def __lt__(self):
+        return (student_best.average_grade() < student_best1.average_grade())
+
 
 class Mentor:
     def __init__(self, name, surname):
@@ -47,6 +56,15 @@ class Lecturer(Mentor):
                  f'Фамилия: {self.surname}\n' \
                  f'Средняя оценка за лекции: {average_grade_lecturer}'
         return result
+
+    def __eq__(self):
+        return (cool_lecturer.average_grade_lecturer() == cool_lecturer1.average_grade_lecturer())
+
+    def __ge__(self):
+        return (cool_lecturer.average_grade_lecturer() >= cool_lecturer1.average_grade_lecturer())
+
+    def __lt__(self):
+        return (cool_lecturer.average_grade_lecturer() < cool_lecturer1.average_grade_lecturer())
 
 
 class Reviewer(Mentor):
